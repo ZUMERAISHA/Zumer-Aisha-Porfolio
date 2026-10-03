@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aisha | Computer Science Student</title>
+    <title>Zumer Aisha | Portfolio</title>
 
     <style>
         * {
@@ -15,19 +15,24 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0b1120;
-            color: #f1f5f9;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #1f2937;
             line-height: 1.6;
         }
 
-        nav {
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #0b1120;
-            border-bottom: 1px solid #1e293b;
-            padding: 18px 8%;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,7 +41,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #60a5fa;
+            color: #111827;
         }
 
         nav ul {
@@ -45,24 +50,26 @@
             gap: 25px;
         }
 
-        nav a {
-            color: #cbd5e1;
+        nav ul li a {
             text-decoration: none;
+            color: #374151;
+            font-size: 15px;
+            font-weight: 500;
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #60a5fa;
+        nav ul li a:hover {
+            color: #6d5dfc;
         }
 
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #0b1120, #111827);
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f7f8fc, #eef0ff);
         }
 
         .hero-content {
@@ -70,24 +77,22 @@
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 58px;
+            color: #111827;
             margin-bottom: 15px;
         }
 
-        .hero h1 span {
-            color: #60a5fa;
-        }
-
         .hero h2 {
-            font-size: 24px;
-            color: #cbd5e1;
+            font-size: 25px;
+            font-weight: 500;
+            color: #6d5dfc;
             margin-bottom: 20px;
         }
 
         .hero p {
-            color: #94a3b8;
-            max-width: 650px;
+            max-width: 680px;
             margin: auto;
+            color: #6b7280;
             font-size: 17px;
         }
 
@@ -97,142 +102,250 @@
 
         .btn {
             display: inline-block;
-            padding: 12px 22px;
-            margin: 5px;
+            padding: 12px 24px;
+            margin: 6px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: 0.3s;
         }
 
-        .primary {
-            background: #2563eb;
+        .primary-btn {
+            background: #6d5dfc;
             color: white;
         }
 
-        .primary:hover {
-            background: #1d4ed8;
+        .primary-btn:hover {
+            background: #5848e8;
         }
 
-        .secondary {
-            border: 1px solid #475569;
-            color: #e2e8f0;
+        .secondary-btn {
+            border: 1px solid #6d5dfc;
+            color: #6d5dfc;
+            background: white;
         }
 
-        .secondary:hover {
-            border-color: #60a5fa;
-            color: #60a5fa;
+        .secondary-btn:hover {
+            background: #f0efff;
         }
 
         section {
-            padding: 80px 8%;
             max-width: 1100px;
             margin: auto;
+            padding: 80px 25px;
         }
 
-        section h2 {
+        .section-title {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #60a5fa;
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #6d5dfc;
         }
 
         .about {
-            text-align: center;
-            color: #cbd5e1;
             max-width: 800px;
             margin: auto;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .skill {
-            background: #111827;
-            border: 1px solid #1e293b;
-            padding: 18px;
             text-align: center;
-            border-radius: 10px;
-            color: #cbd5e1;
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
             transition: 0.3s;
         }
 
-        .skill:hover {
-            transform: translateY(-4px);
-            border-color: #60a5fa;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        .project-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 14px;
-            padding: 30px;
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .project-card h3 {
-            font-size: 25px;
-            color: #f8fafc;
+        .card h3 {
+            color: #111827;
             margin-bottom: 10px;
         }
 
+        .card p {
+            color: #6b7280;
+        }
+
+        .education-card {
+            border-left: 4px solid #6d5dfc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .soft-skill {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 12px 20px;
+            border-radius: 30px;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
         .project-card p {
-            color: #94a3b8;
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .tech {
             margin-bottom: 20px;
         }
 
-        .tags {
-            margin-bottom: 20px;
-        }
-
-        .tag {
+        .tech span {
             display: inline-block;
-            background: #1e3a8a;
-            color: #bfdbfe;
-            padding: 6px 10px;
+            background: #f0efff;
+            color: #5b4be7;
+            padding: 6px 12px;
             border-radius: 20px;
             margin: 4px;
             font-size: 13px;
         }
 
-        .contact {
+        .contact-box {
             text-align: center;
+            background: white;
+            padding: 45px 25px;
+            border-radius: 15px;
+            border: 1px solid #e5e7eb;
         }
 
-        .contact p {
-            color: #94a3b8;
+        .contact-box p {
+            color: #6b7280;
             margin-bottom: 20px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            margin: 8px;
+            color: #6d5dfc;
+            text-decoration: none;
+            font-weight: 600;
         }
 
         footer {
             text-align: center;
             padding: 25px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
+            background: #111827;
+            color: #d1d5db;
+            font-size: 14px;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
+
             nav {
                 flex-direction: column;
                 gap: 15px;
             }
 
             nav ul {
-                gap: 12px;
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 15px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 42px;
             }
 
             .hero h2 {
-                font-size: 20px;
+                font-size: 21px;
+            }
+
+            .cards,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 18px;
             }
         }
     </style>
@@ -241,41 +354,102 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Aisha.</div>
+    <header>
+        <nav>
+            <div class="logo">Zumer Aisha</div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
-
+    <!-- Home -->
+    <section class="hero" id="home">
         <div class="hero-content">
 
-            <h1>Hi, I'm <span>Aisha</span> 👋</h1>
+            <h1>Zumer Aisha</h1>
 
-            <h2>Computer Science Student | Python & AI Enthusiast</h2>
+            <h2>Computer Science Student | Aspiring Software Developer</h2>
 
             <p>
-                I'm a Computer Science student passionate about learning
-                programming, artificial intelligence, and building useful
-                technology projects.
+                I am a Computer Science student with an interest in Python,
+                software development, artificial intelligence, and building
+                practical digital solutions. I enjoy learning new technologies
+                and turning ideas into useful projects.
             </p>
 
             <div class="buttons">
-                <a href="#projects" class="btn primary">View My Projects</a>
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
 
-                <a href="https://github.com/" 
-                   target="_blank" 
-                   class="btn secondary">
-                    GitHub
-                </a>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <p class="about">
+            I’m Zumer Aisha, a Computer Science student with a strong interest in programming, artificial intelligence, web development, and digital creativity. 
+            I enjoy learning new technologies and applying my knowledge through practical projects and real-world ideas.
+            <br><br> 
+            Alongside my academic journey, I have developed skills in Python, C++, web technologies, AI, databases, video editing, digital content creation, and other digital tools. 
+            I believe in continuous learning, improving through hands-on experience, and turning creative ideas into meaningful digital solutions.
+
+        </p>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">My <span>Education</span></h2>
+
+        <div class="cards">
+
+            <div class="card education-card">
+
+                <h3>BS Computer Science</h3>
+
+                <p>
+                    <strong>University:</strong> YOUR UNIVERSITY NAME
+                </p>
+
+                <p>
+                    <strong>Expected Graduation:</strong> 2028
+                </p>
+
+                <p>
+                    Currently pursuing a degree in Computer Science with
+                    a focus on programming, software development, databases,
+                    and emerging technologies.
+                </p>
+
+            </div>
+
+            <div class="card education-card">
+
+                <h3>Additional Learning</h3>
+
+                <p>
+                    Completed and currently pursuing online courses and
+                    certifications in areas such as Python, Artificial
+                    Intelligence, Digital Marketing, Freelancing,
+                    Video Editing, WordPress, and SEO.
+                </p>
+
             </div>
 
         </div>
@@ -283,75 +457,138 @@
     </section>
 
 
-    <!-- About Section -->
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p class="about">
-            I am a Computer Science student who enjoys exploring Python,
-            artificial intelligence, programming, and technology.
-            I believe in learning by building projects and continuously
-            improving my technical skills.
-        </p>
-
-    </section>
-
-
-    <!-- Skills Section -->
+    <!-- Technical Skills -->
     <section id="skills">
 
-        <h2>Skills</h2>
+        <h2 class="section-title">My<span>Skills</span></h2>
 
-        <div class="skills">
+        <div class="skills-grid">
 
             <div class="skill">Python</div>
             <div class="skill">C++</div>
-            <div class="skill">OOP</div>
-            <div class="skill">DBMS</div>
-            <div class="skill">AI with Python</div>
+            <div class="skill">Object-Oriented Programming</div>
             <div class="skill">HTML & CSS</div>
-            <div class="skill">GitHub</div>
-            <div class="skill">Streamlit</div>
+            <div class="skill">Artificial Intelligence</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Web Development</div>
+            <div class="skill">Digital Marketing</div>
+            <div class="skill">Freelancing</div>
+            <div class="skill">SEO</div>
+            <div class="skill">Word Press</div>
+            <div class="skill">Video Editing</div>
 
         </div>
 
     </section>
 
 
-    <!-- Projects Section -->
+    <!-- Services -->
+    <section id="services">
+
+        <h2 class="section-title">My <span>Services</span></h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <h3>Python Development</h3>
+
+                <p>
+                    Developing simple and practical Python-based applications
+                    and solutions.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Creating clean and responsive websites using HTML and CSS.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>AI-Based Solutions</h3>
+
+                <p>
+                    Building beginner-friendly AI-powered solutions for
+                    practical use cases.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Soft Skills -->
+    <section id="soft-skills">
+
+        <h2 class="section-title">Soft <span>Skills</span></h2>
+
+        <div class="soft-skills">
+
+            <div class="soft-skill">Problem Solving</div>
+            <div class="soft-skill">Communication</div>
+            <div class="soft-skill">Teamwork</div>
+            <div class="soft-skill">Time Management</div>
+            <div class="soft-skill">Creativity</div>
+            <div class="soft-skill">Adaptability</div>
+            <div class="soft-skill">Active Listening</div>
+            <div class="soft-skill">Critical Thinking</div>
+            <div class="soft-skill">Decision Making</div>
+            <div class="soft-skill">Leadership</div>
+            <div class="soft-skill">Adaptability</div>
+            <div class="soft skill">Continuous learning</div>
+ 
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
     <section id="projects">
 
-        <h2>Featured Project</h2>
+        <h2 class="section-title">Featured <span>Project</span></h2>
 
         <div class="project-card">
 
             <h3>Biz Voice AI</h3>
 
             <p>
-                An AI-powered voice customer support web application
-                designed to help modern businesses provide quick,
-                consistent, and business-specific responses to customers.
+                An AI-powered voice customer support web application designed
+                to help businesses respond to customer queries using
+                business-specific information and voice interaction.
             </p>
 
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Streamlit</span>
-                <span class="tag">OpenAI API</span>
-                <span class="tag">AI</span>
-                <span class="tag">Voice Interaction</span>
+            <div class="tech">
+
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>OpenAI API</span>
+                <span>HTML & CSS</span>
+                <span>GitHub</span>
+
             </div>
+
+            
 
             <a href="https://biz-voice-ai.streamlit.app/"
                target="_blank"
-               class="btn primary">
+               class="btn primary-btn">
                 Live Demo
             </a>
 
             <a href="https://github.com/ZUMERAISHA/BIZ-VOICE-AI"
                target="_blank"
-               class="btn secondary">
-                View Code
+               class="btn secondary-btn">
+                GitHub
             </a>
 
         </div>
@@ -359,29 +596,35 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
 
-        <h2>Let's Connect</h2>
+        <h2 class="section-title">Contact <span>Me</span></h2>
 
-        <div class="contact">
+        <div class="contact-box">
 
             <p>
-                I'm always interested in learning, building,
-                and connecting with people in technology.
+                Feel free to connect with me for projects, collaborations,
+                or professional opportunities.
             </p>
 
-            <a href="https://www.linkedin.com/"
-               target="_blank"
-               class="btn primary">
-                LinkedIn
-            </a>
+            <div class="contact-links">
 
-            <a href="https://github.com/"
-               target="_blank"
-               class="btn secondary">
-                GitHub
-            </a>
+                <a href="mailto:zumeraishakhalidofficial@gmail.com">
+                    Email
+                </a>
+
+                <a href="https://www.linkedin.com/in/zumer-aisha-2a2232436/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/ZUMERAISHA"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
 
         </div>
 
@@ -391,9 +634,15 @@
     <!-- Footer -->
     <footer>
 
-        <p>© 2026 Aisha. Built with HTML & CSS.</p>
+        <p>
+            © 2026 Zumer Aisha. All rights reserved.
+        </p>
 
     </footer>
 
 </body>
 </html>
+```
+
+```
+

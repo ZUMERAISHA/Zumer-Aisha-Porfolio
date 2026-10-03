@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aisha | Computer Science Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0b1120;
+            border-bottom: 1px solid #1e293b;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0b1120, #111827);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #1d4ed8;
+        }
+
+        .secondary {
+            border: 1px solid #475569;
+            color: #e2e8f0;
+        }
+
+        .secondary:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 80px 8%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #60a5fa;
+        }
+
+        .about {
+            text-align: center;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            background: #111827;
+            border: 1px solid #1e293b;
+            padding: 18px;
+            text-align: center;
+            border-radius: 10px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+            border-color: #60a5fa;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 30px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .project-card h3 {
+            font-size: 25px;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1e3a8a;
+            color: #bfdbfe;
+            padding: 6px 10px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 13px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Aisha.</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm <span>Aisha</span> 👋</h1>
+
+            <h2>Computer Science Student | Python & AI Enthusiast</h2>
+
+            <p>
+                I'm a Computer Science student passionate about learning
+                programming, artificial intelligence, and building useful
+                technology projects.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">View My Projects</a>
+
+                <a href="https://github.com/" 
+                   target="_blank" 
+                   class="btn secondary">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p class="about">
+            I am a Computer Science student who enjoys exploring Python,
+            artificial intelligence, programming, and technology.
+            I believe in learning by building projects and continuously
+            improving my technical skills.
+        </p>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+            <div class="skill">OOP</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">AI with Python</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Streamlit</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+        <h2>Featured Project</h2>
+
+        <div class="project-card">
+
+            <h3>Biz Voice AI</h3>
+
+            <p>
+                An AI-powered voice customer support web application
+                designed to help modern businesses provide quick,
+                consistent, and business-specific responses to customers.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">OpenAI API</span>
+                <span class="tag">AI</span>
+                <span class="tag">Voice Interaction</span>
+            </div>
+
+            <a href="https://biz-voice-ai.streamlit.app/"
+               target="_blank"
+               class="btn primary">
+                Live Demo
+            </a>
+
+            <a href="https://github.com/ZUMERAISHA/BIZ-VOICE-AI"
+               target="_blank"
+               class="btn secondary">
+                View Code
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <div class="contact">
+
+            <p>
+                I'm always interested in learning, building,
+                and connecting with people in technology.
+            </p>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               class="btn primary">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/"
+               target="_blank"
+               class="btn secondary">
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Aisha. Built with HTML & CSS.</p>
+
+    </footer>
+
+</body>
+</html>

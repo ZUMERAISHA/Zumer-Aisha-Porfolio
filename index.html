@@ -351,10 +351,78 @@
 
 /* Projects Section Styling */
 
-        .project-image {
-    width: 100%;
-    max-width: 400px;
-    height: 220px;
+ 
+/* Project Card Layout */
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 950px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Left Side Details */
+
+.project-details {
+    flex: 1;
+    text-align: left;
+}
+
+.project-details h3 {
+    font-size: 25px;
+    color: #c2185b;
+    margin-bottom: 15px;
+}
+
+.project-details p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Technologies */
+
+.project-tech {
+    margin: 15px 0;
+}
+
+.project-tech span {
+    display: inline-block;
+    background: #fce4ec;
+    color: #c2185b;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+/* Project Links */
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    display: inline-block;
+    background: #c2185b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 5px 5px 5px 0;
+}
+
+/* Right Side Image */
+
+.project-image {
+    flex: 0 0 40%;
+    max-width: 350px;
+    height: 230px;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -365,6 +433,23 @@
     object-fit: cover;
     display: block;
 }
+
+/* Mobile Responsive */
+
+@media (max-width: 650px) {
+    .project-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-image {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+}
+
 
 </head>
 
@@ -613,12 +698,20 @@
         <h2 class="section-title">Featured <span>Project</span></h2>
 
         <div class="project-card">
+        
+        <!-- Right Side: Project Image -->
+    <div class="project-image">
 
     <div class="project-image">
         <img src="Images/Biz-Voice-AI.jpg"
              alt="Biz Voice AI">
 
     </div>
+        </div>
+        
+        <!-- Left Side: Project Details -->
+        <div class="project-details">
+        
             <h3>Biz Voice AI</h3>
 
             <p>

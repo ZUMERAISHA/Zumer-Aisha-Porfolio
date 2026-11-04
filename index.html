@@ -348,6 +348,78 @@
                 padding: 60px 18px;
             }
         }
+
+/* Projects Section Styling */
+
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 25px auto;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.project-card h3 {
+    color: #c2185b;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.project-card p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+.project-tech {
+    margin: 15px 0;
+}
+
+.project-tech span {
+    display: inline-block;
+    background: #fce4ec;
+    color: #c2185b;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    display: inline-block;
+    background: #c2185b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    margin: 5px;
+    transition: background 0.3s ease;
+}
+
+.project-links a:hover {
+    background: #880e4f;
+}
     </style>
 </head>
 
@@ -597,6 +669,11 @@
 
         <div class="project-card">
 
+    <div class="project-image">
+        <img src="images/Biz-Voice-AI.jpg"
+             alt="Biz Voice AI">
+
+    </div>
             <h3>Biz Voice AI</h3>
 
             <p>
@@ -624,6 +701,43 @@
             </a>
 
         </div>
+        <div class="project-card">
+
+    <div class="project-image">
+        <img src="images/Sweet Moments.jpg"
+             alt="Sweet Moments Website">
+    </div>
+
+    <div class="project-content">
+
+        <h3>Sweet Moments</h3>
+
+        <p>
+            Sweet Moments is a beautiful and responsive
+            customer-facing website designed with a
+            modern interface and user-friendly navigation.
+        </p>
+
+        <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+        </div>
+
+        <div class="project-links">
+            <a href="https://zumeraisha.github.io/Sweet-Moments/"
+               target="_blank" rel="noopener noreferrer">
+                Live Demo
+            </a>
+
+            <a href="https://github.com/ZUMERAISHA/Sweet-Moments"
+               target="_blank" rel="noopener noreferrer">
+                GitHub Code
+            </a>
+        </div>
+
+    </div>
+</div>
 
     </section>
 
@@ -657,7 +771,7 @@
                 </a>
 
             </div>
-
+        
         </div>
 
     </section>

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zumer Aisha | Portfolio</title>
+    <title> Zumer Aisha Khalid | Portfolio</title>
 
     <style>
         * {
@@ -241,30 +242,49 @@
             font-weight: 500;
         }
 
+        /* Projects Section */
+
         .project-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 950px;
             background: white;
             border-radius: 15px;
-            padding: 30px;
             border: 1px solid #e5e7eb;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            transition: 0.3s;
         }
 
-        .project-card h3 {
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-details {
+            flex: 1;
+            min-width: 0;
+            text-align: left;
+        }
+
+        .project-details h3 {
             font-size: 24px;
             margin-bottom: 12px;
             color: #111827;
         }
 
-        .project-card p {
+        .project-details p {
             color: #6b7280;
             margin-bottom: 15px;
         }
 
-        .tech {
+        .project-tech {
             margin-bottom: 20px;
         }
 
-        .tech span {
+        .project-tech span {
             display: inline-block;
             background: #f0efff;
             color: #5b4be7;
@@ -272,6 +292,36 @@
             border-radius: 20px;
             margin: 4px;
             font-size: 13px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            background: #6d5dfc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin: 5px 5px 5px 0;
+            transition: 0.3s;
+        }
+
+        .project-links a:hover {
+            background: #5848e8;
+        }
+
+        .project-image {
+            flex: 0 0 40%;
+            max-width: 350px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .contact-box {
@@ -302,6 +352,8 @@
             color: #d1d5db;
             font-size: 14px;
         }
+
+        /* Responsive Design */
 
         @media (max-width: 800px) {
 
@@ -334,6 +386,21 @@
             }
         }
 
+        @media (max-width: 650px) {
+
+            .project-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .project-image {
+                flex: none;
+                width: 100%;
+                max-width: 100%;
+                height: 220px;
+            }
+        }
+
         @media (max-width: 500px) {
 
             .hero h1 {
@@ -349,111 +416,15 @@
             }
         }
 
-/* Projects Section Styling */
-
- 
-/* Project Card Layout */
-
-.project-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-    padding: 25px;
-    margin: 30px auto;
-    max-width: 950px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* Left Side Details */
-
-.project-details {
-    flex: 1;
-    text-align: left;
-}
-
-.project-details h3 {
-    font-size: 25px;
-    color: #c2185b;
-    margin-bottom: 15px;
-}
-
-.project-details p {
-    color: #666;
-    line-height: 1.7;
-}
-
-/* Technologies */
-
-.project-tech {
-    margin: 15px 0;
-}
-
-.project-tech span {
-    display: inline-block;
-    background: #fce4ec;
-    color: #c2185b;
-    padding: 7px 12px;
-    border-radius: 20px;
-    margin: 4px;
-    font-size: 13px;
-}
-
-/* Project Links */
-
-.project-links {
-    margin-top: 20px;
-}
-
-.project-links a {
-    display: inline-block;
-    background: #c2185b;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 7px;
-    text-decoration: none;
-    margin: 5px 5px 5px 0;
-}
-
-/* Right Side Image */
-
-.project-image {
-    flex: 0 0 40%;
-    max-width: 350px;
-    height: 230px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Mobile Responsive */
-
-@media (max-width: 650px) {
-    .project-card {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .project-image {
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-        height: 220px;
-    }
-}
-
-
+    </style>
 </head>
 
 <body>
+
+
+</body>
+</html>
+
 
     <!-- Navigation -->
     <header>
